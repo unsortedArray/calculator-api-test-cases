@@ -28,7 +28,7 @@ describe("Get Homepage Message" , () => {
         chai.request(server).get("/").end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('string');
-            res.body.eql("Hello world");
+            res.body.eql("Hello world!");
             done();
 
         })
