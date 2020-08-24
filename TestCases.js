@@ -13,6 +13,7 @@ describe("Get Homepage" , () => {
 
         chai.request(server).get("/").end((err, res) => {
             res.should.have.status(200);
+            done();
 
         })
     })
