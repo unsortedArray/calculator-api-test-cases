@@ -3,7 +3,7 @@ const chaiHttp = require('chai-http');
 const serialiser = require('node-serialize')
 const should = chai.should();
 chai.use(chaiHttp);
-let server = require('../index');
+let server = require('../src/index');
 
 
 
