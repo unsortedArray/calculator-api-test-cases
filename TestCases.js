@@ -163,7 +163,7 @@ describe("substract two  negative numbers", () => {
         chai.request(server).post('/sub').set('content-type', 'application/json').send(requestBody).end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
-            res.body.should.have.property('message').eql('the sum of given two numbers');
+            res.body.should.have.property('message').eql('the difference of given two numbers');
             res.body.should.have.property('sum').eql(-19000);
             done();
         })
@@ -201,7 +201,7 @@ describe("substract two floating point number", () => {
         chai.request(server).post('/sub').set('content-type', 'application/json').send(requestBody).end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
-            res.body.should.have.property('message').eql('the substract of given two numbers');
+            res.body.should.have.property('message').eql('the difference of given two numbers');
             res.body.should.have.property('sum').eql(2.0);
             done();
         })
@@ -237,7 +237,7 @@ describe("Multiply two numbers", () => {
             num2: 4
 
         }
-        chai.request(server).post('/multipy').set('content-type', 'application/json').send(requestBody).end((err, res) => {
+        chai.request(server).post('/multiply').set('content-type', 'application/json').send(requestBody).end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('message').eql('The product of given numbers');
@@ -257,7 +257,7 @@ describe("Multiply two strings", () => {
             num2: "another"
 
         }
-        chai.request(server).post('/multipy').set('content-type', 'application/json').send(requestBody).end((err, res) => {
+        chai.request(server).post('/multiply').set('content-type', 'application/json').send(requestBody).end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('message').eql('Invalid data types');
@@ -275,7 +275,7 @@ describe("Multiply two float numbers", () => {
             num2: 2.5
 
         }
-        chai.request(server).post('/multipy').set('content-type', 'application/json').send(requestBody).end((err, res) => {
+        chai.request(server).post('/multiply').set('content-type', 'application/json').send(requestBody).end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('message').eql('The product of given numbers');
@@ -295,7 +295,7 @@ describe("Multiply two large numbers", () => {
             num2: 10000,
 
         }
-        chai.request(server).post('/multipy').set('content-type', 'application/json').send(requestBody).end((err, res) => {
+        chai.request(server).post('/multiply').set('content-type', 'application/json').send(requestBody).end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('message').eql('Overflow');
