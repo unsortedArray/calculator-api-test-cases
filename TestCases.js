@@ -7,17 +7,6 @@ let server = require('../src/index');
 
 
 
-describe("Get Homepage" , () => {
-
-    it("should simply test the home page loads or not", (done) => {
-
-        chai.request(server).get("/").end((err, res) => {
-            res.should.have.status(200);
-            done();
-
-        })
-    })
-})
 
 
 
