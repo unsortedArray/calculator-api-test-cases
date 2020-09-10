@@ -149,7 +149,7 @@ describe("substract two  negative numbers", () => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('message').eql('the difference of given two numbers');
-            res.body.should.have.property('sum').eql(19000);
+            res.body.should.have.property('difference').eql(19000);
             done();
         })
     })
@@ -187,7 +187,7 @@ describe("substract two floating point number", () => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('message').eql('the difference of given two numbers');
-            res.body.should.have.property('sum').eql(2.0);
+            res.body.should.have.property('difference').eql(2.0);
             done();
         })
     })
