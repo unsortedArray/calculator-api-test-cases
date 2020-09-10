@@ -125,7 +125,7 @@ describe("Sub two numbers", () => {
             num2: 200
 
         }
-        chai.request(server).post('/add').set('content-type', 'application/json').send(requestBody).end((err, res) => {
+        chai.request(server).post('/sub').set('content-type', 'application/json').send(requestBody).end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('message').eql('the difference of given two numbers');
