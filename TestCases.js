@@ -72,7 +72,7 @@ describe("Add two strings", () => {
         chai.request(server).post('/add').set('content-type', 'application/json').send(requestBody).end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
-            res.body.should.have.property('message').eql('invalid data types');
+            res.body.should.have.property('message').eql('Invalid data types');
             done();
         })
     })
@@ -168,7 +168,7 @@ describe("substract two strings", () => {
         chai.request(server).post('/sub').set('content-type', 'application/json').send(requestBody).end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
-            res.body.should.have.property('message').eql('invalid data types');
+            res.body.should.have.property('message').eql('Invalid data types');
             done();
         })
     })
