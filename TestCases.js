@@ -21,21 +21,6 @@ describe("Get Homepage" , () => {
 
 
 
-describe("Get Homepage Message" , () => {
-
-    it("should simply test the home page has a 'Hello world message or not'", (done) => {
-
-        chai.request(server).get("/").end((err, res) => {
-            res.should.have.status(200);
-            res.body.should.be.a('string');
-            res.body.eql("Hello world!");
-            done();
-
-        })
-    })
-})
-
-
 describe("Add two numbers", () => {
 
     it('should test a post request with two numbers and add and return a result', (done) => {
